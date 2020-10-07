@@ -103,17 +103,19 @@ class PaymentController extends Controller
         }
 
         if ('success' == $tranx['data']['status']) {
+            // dd($tranx);
             Transaction::create([
                 'amount' => $tranx['data']['metadata']['amount'],
                 'user_id' => Auth::id(),
                 'description' => $tranx['data']['metadata']['remarks']
             ]);
+
             $user = User::findOrFail(Auth::id());
             $user->amount += $tranx['data']['metadata']['amount'];
             $user->save();
             $data  = [
                 'amount' => $tranx['data']['metadata']['amount'],
-                'description' => $tranx['data']['metadata']['description'],
+                'description' => $tranx['data']['metadata']['remarks'],
             ];
 
             Mail::to(Auth::user()->email)->send(new YourFundingWasSuccessful($data));
