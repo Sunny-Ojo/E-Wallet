@@ -16,7 +16,7 @@
                         {{ Auth::user()->wallet_id }}
                     </div>
                     <div class="text-center font-weight-bold userID p-0 mt-4">
-                        <h1> &#x20A6;
+                        <h1> Naira
                             {{ number_format(Auth::user()->amount) }}</h1>
                     </div>
                     <div class="   mt-4">
@@ -38,21 +38,27 @@
 
             </div>
         </div>
-        <div class="col-sm-12 col-md-6" style="display: none" id="transactions">
+        <div class="col-sm-12 col-md-6 mt-3" style="display: none" id="transactions">
             <div class="card">
                 <div class="card-header text-left">Transaction History</div>
                 <div class="card-body">
-                    @foreach ($transactions as $item)
-                        <div class="border m-2">
-                            <li class="list-group-item">Amount: &#x20A6;
-                                {{ number_format($item->amount) }}</li>
-                            <li class="list-group-item">Description: {{ $item->description }}</li>
-                            <li class="list-group-item">Date: {{ $item->created_at->diffForHumans() }}</li>
+                    @if (count($transactions) > 0)
+                        @foreach ($transactions as $item)
+                            <div class="border m-2">
+                                <li class="list-group-item">Amount:
+                                    Naira {{ number_format($item->amount) }}</li>
+                                <li class="list-group-item">Description: {{ $item->description }}</li>
+                                <li class="list-group-item">Date: {{ $item->created_at->diffForHumans() }}</li>
 
-                        </div>
+                            </div>
 
-                    @endforeach
-                    {{ $transactions->links() }}
+                        @endforeach
+                        {{ $transactions->links() }}
+                    @else
+                        <h4 class="text-center">
+                            No transaction history found.
+                        </h4>
+                    @endif
                 </div>
             </div>
 

@@ -58,9 +58,10 @@
         <div class="navbar-brand pl-2 ml-5 text-warning">Register On Smart Wallet</div>
 
         @endguest
-      @auth
+     
       <div class="navbar-brand pl-2 ml-5"><a href="/home" class=" text-warning ">Home</a></div>
-      <ul class="nav navbar-nav">
+      @auth
+       <ul class="nav navbar-nav">
           <li class="nav-item active">
           </li>
 
@@ -106,7 +107,7 @@
                         </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                    <p><b> Dear {{ Auth::user()->name,  }},</b> Your Smart E-Wallet balance is &#x20A6;
+                    <p><b> Dear {{ Auth::user()->name,  }},</b> Your Smart E-Wallet balance is Naira
                         {{ number_format(Auth::user()->amount) }}</p>
                     
                     </div>
