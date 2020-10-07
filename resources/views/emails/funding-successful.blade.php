@@ -11,7 +11,7 @@
 <body>
     <h1>Hello {{ Auth::user()->name }},</h1>
     <p>You have Successfully Funded your wallet with the sum of &#8358;{{ number_format($data['amount']) }} and your
-        wallet balance is &#8358;{{ number_format(Auth::user()->amount) }}.</p>
+        wallet balance is &#8358;{{ number_format($data['balance']) }}.</p>
     <p>Funding Description: {{ $data['description'] }}.</p>
     <br>
     <br>

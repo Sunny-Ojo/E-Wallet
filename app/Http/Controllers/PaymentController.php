@@ -116,6 +116,7 @@ class PaymentController extends Controller
             $data  = [
                 'amount' => $tranx['data']['metadata']['amount'],
                 'description' => $tranx['data']['metadata']['remarks'],
+                'balance' => $user->amount
             ];
 
             Mail::to(Auth::user()->email)->send(new YourFundingWasSuccessful($data));
