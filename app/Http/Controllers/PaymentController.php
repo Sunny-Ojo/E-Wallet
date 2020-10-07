@@ -38,7 +38,7 @@ class PaymentController extends Controller
                 'metadata' => $data
             ]),
             CURLOPT_HTTPHEADER => [
-                "authorization: " . env('PAYSTACK_PUBLIC_TEST_KEY'), //replace this with your own test key
+                "authorization: " . env('PAYSTACK_PUBLIC_TEST_KEY',  'Bearer sk_test_514154f2caa105e1480221a8efa2d2d72d40c190'), //replace this with your own test key
                 "content-type: application/json",
                 "cache-control: no-cache"
             ],
@@ -83,7 +83,7 @@ class PaymentController extends Controller
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_HTTPHEADER => [
                 "accept: application/json",
-                "authorization: " . env('PAYSTACK_PUBLIC_TEST_KEY'),
+                "authorization: " . env('PAYSTACK_PUBLIC_TEST_KEY', 'Bearer sk_test_514154f2caa105e1480221a8efa2d2d72d40c190'),
                 "cache-control: no-cache"
             ],
         ));
