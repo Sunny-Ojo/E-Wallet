@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+.main-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* font-family: 'Roboto', sans-serif; */
+    position: relative;
+}
+
+
+body {
+    background: #f8f4e7 !important;
+    font-family: 'Carter One', cursive;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.menu-icon {
+    color: #fff;
+}
+
+.opennav {
+    /* position:fixed;
+    left: 20px;
+    top: 40px;
+    outline:none;
+    transition:ease 0.8s; */
+}
+
+.myNavlink {
+    font-weight: 500 !important;
+    color: #2f5f13 !important;
+}
+
+.myCardStyle {
+    border-radius: 90px !important;
+    border: 0 !important;
+    margin-top: 35px;
+    background: #fbd341 !important;
+}
+
+.myCardStyleGreen {
+    border-radius: 90px !important;
+    border: 0 !important;
+    margin-top: 35px;
+    background: #4e9525 !important;
+}
+
+.mySmCard {
+    border-radius: 90px !important;
+    border: 0 !important;
+    margin-top: 50px !important;
+    background: #C1C530 !important;
+}
+
+
+
+.myCardTitle {
+    font-size: 25px !important;
+    text-transform: uppercase;
+    font-weight: 800 !important;
+}
+
+
+.myCardStyle img {
+    width: 120px;
+    position: relative;
+    top: -40px;
+    border: solid 5px #fbd341 !important;
+    /* min-height:00px!important; */
+}
+
+.myCount {
+    font-size: 85px !important;
+    font-weight: 1000;
+    position: relative;
+    top: -160px;
+    color: #fff !important;
+}
+
+.total {
+    font-size: 16px;
+    font-weight: 900;
+    position: relative;
+    top: -181px;
+    color: #fff !important;
+}
+
+.mypadding-bottom {
+    min-height: 350px;
+}
+
+
+.noLgScr {
+    display: none
+}
+
+
+.closeing {
+    position: relative;
+    right: -220px;
+    padding-right: 20px;
+    transition: ease 0.8s;
+}
+
+.opennav:focus {
+    outline: none;
+}
+
+.closeing:focus {
+    outline: none;
+}
+
+.sidebar-panel.activate {
+    margin-left: 0px;
+    transition: ease 0.8s;
+}
+
+.sidebar-panel.unactivate {
+    margin-left: -300px;
+    transition: ease 0.8s;
+}
+
+.black-overlay.dark {
+    background: #000;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+}
+
+
+.sub-head {
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    padding: 40px 0 30px;
+    text-transform: uppercase;
+    font-size: 2em;
+    background: #000;
+}
+
+.sidebar-panel {
+    /* background:#337ab7; */
+    background: #fbd341;
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    padding-top: 20px;
+    margin-left: -300px;
+    padding-top: 40px;
+    z-index: 999;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+}
+
+
+
+
+
+/* sidebar scrollbar styles */
+
+
+.sidebar-panel::-webkit-scrollbar {
+    width: 1em;
+}
+
+.sidebar-panel::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(3, 28, 4, 0.3);
+}
+
+.sidebar-panel::-webkit-scrollbar-thumb {
+    background-color: #4e9525;
+    outline: 1px solid #4e9525;
+}
+
+
+
+/* sidebar scrollbar end */
+
+
+
+
+
+.sidebar-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.sidebar-panel ul li {
+    background: #000;
+    color: #fff;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px 0;
+    border: 5px solid #4e9525;
+    transition: ease 0.4s;
+}
+
+.sidebar-panel ul li:hover {
+    background: #4e9525;
+    color: #fbd341;
+    box-shadow: 2px 3px 6px 2px #000;
+    font-weight: bold;
+    transition: ease 0.4s;
+    letter-spacing: 5px;
+}
+
+
+.side-content {
+    width: 100%;
+    max-width: 991px;
+    margin: 0 auto;
+}
+
+.myFontIcon {
+    font-size: 25px !important;
+    padding: 0px 20px !important;
+}
+
+.myFontIcon:hover {
+    color: #d1a916 !important;
+    transition: all .5s ease-in-out;
+}
+
+.myFontBars {
+    font-size: 25px !important;
+}
+
+.myFontBars:hover {
+    color: #d1a916 !important;
+    transition: all .5s ease-in-out;
+}
+
+.closeFontIcon {
+    color: #000 !important;
+}
+
+.userID {
+    position: relative;
+    top: -19px;
+    font-size: 14px;
+}
+
+.myFarmText {
+    font-size: 15px;
+    color: #000 !important;
+    padding: 50px 0px;
+    font-size: 13px;
+}
+
+@media (max-width:978px) {
+    .closeing {
+        position: relative;
+        /* right: 350px; */
+        padding-right: 20px;
+        transition: ease 0.8s;
+
+    }
+
+    .myNavlink {
+        display: none !important;
+    }
+
+    .noLgScr {
+        display: block;
+    }
+
+    .navbar {
+        background: #1c2830 !important;
+    }
+
+    .myFontIcon {
+
+        color: #fbd341 !important;
+        padding: 0px 10px !important;
+
+
+    }
+
+    .myFontBars {
+        color: #fbd341 !important;
+
+    }
+
+    .sidebar-panel.activate {
+        width: 100% !important;
+    }
+
+
+}
