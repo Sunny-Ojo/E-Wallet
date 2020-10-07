@@ -3,7 +3,7 @@
 @section('content')
     <div class="row justify-content-center mt-4">
         <div class="col-md-6 ">
-            <div class="card ">
+            <div class="card my-5">
                 <div class="card-header text-center ">
                     <h4>{{ __('CREATE AN ACCOUNT') }}</h4>
                 </div>
@@ -78,6 +78,9 @@
                             <button type="submit" class="btn btn-block btn-success">
                                 {{ __('Register') }}
                             </button>
+                            <hr>
+                            <p class="text-center ">OR</p>
+                            <a href="{{ route('login') }}" class="btn btn-primary btn-block">Login</a>
                         </div>
                     </form>
                 </div>

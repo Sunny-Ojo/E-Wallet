@@ -54,16 +54,17 @@
         <button class="opennav">
             <i class="text-dark myFontBars fa fa-bars menu-icon fa-2x" aria-hidden="true"></i>
         </button>
-        @guest
-        <div class="navbar-brand pl-2 ml-5 text-warning">Register On Smart Wallet</div>
+ @guest
+        <div class="navbar-brand pl-2 ml-5 text-warning">Smart Wallet</div>
 
         @endguest
      
-      <div class="navbar-brand pl-2 ml-5"><a href="/home" class=" text-warning ">Home</a></div>
       @auth
        <ul class="nav navbar-nav">
           <li class="nav-item active">
           </li>
+          <div class="navbar-brand pl-2 ml-5"><a href="/home" class=" text-warning ">Home</a></div>
+
 
           <li class="nav-item">
               <a class="nav-link d-none d-lg-block text-warning" data-toggle="modal" data-target="#modelId2">Fund Wallet</a>

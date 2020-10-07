@@ -57,7 +57,7 @@
         <div class="masthead-content">
             <div class="container">
                 <h2 class="masthead-subheading mb-0">Online Wallet Transactions</h2>
-                <a href="{{ route('home') }}" class="btn btn-primary btn-xl rounded-pill mt-5">GET STARTED</a>
+                <a href="{{ route('register') }}" class="btn btn-primary btn-xl rounded-pill mt-5">GET STARTED</a>
             </div>
         </div>
 
