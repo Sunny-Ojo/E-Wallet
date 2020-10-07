@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Smart Wallet</title>
     <script src="{{ asset('user-dashboard/js/jquery.js') }}"></script>
     <script src="{{ asset('user-dashboard/bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('user-dashboard/bootstrap/dist/css/bootstrap.min.css') }}">
@@ -28,20 +28,22 @@
         </div>
         <div class="d-flex justify-content-center navbar-brand pl-2">SMART WALLET</div>
 
-        <div class="col-sm-12">
-            <div class="sidelistwrp">
-                <ul>
-                    <li class="pl-2 noLgScr">Dashboard</li>
-                    <li class="pl-2" data-toggle="modal" data-target="#modelId">My Wallet Balance</li>
-                    <a href="tel://08121225275">
-                        <li class="pl-2">Live Call</li>
-                    </a>
-                    <a href="{{ route('logout') }}">
-                        <li class="pl-2">Logout</li>
-                    </a>
-                </ul>
-            </div>
+     @auth
+     <div class="col-sm-12">
+        <div class="sidelistwrp">
+            <ul>
+                <li class="pl-2 noLgScr">Dashboard</li>
+                <li class="pl-2" data-toggle="modal" data-target="#modelId">My Wallet Balance</li>
+                <a href="tel://08121225275">
+                    <li class="pl-2">Live Call</li>
+                </a>
+                <a href="{{ route('logout') }}">
+                    <li class="pl-2">Logout</li>
+                </a>
+            </ul>
         </div>
+    </div>
+     @endauth
     </div>
 
 
@@ -51,25 +53,33 @@
         <button class="opennav">
             <i class="text-dark myFontBars fa fa-bars menu-icon fa-2x" aria-hidden="true"></i>
         </button>
-        <div class="navbar-brand pl-2 ml-5">Home</div>
-        <ul class="nav navbar-nav">
-            <li class="nav-item active">
-            </li>
+        @guest
+        <div class="navbar-brand pl-2 ml-5">Register On Smart Wallet</div>
 
-            <li class="nav-item">
-                <a class="nav-link myNavlink" data-toggle="modal" data-target="#modelId2">Fund Wallet</a>
-            </li>
+        @endguest
+      @auth
+      <div class="navbar-brand pl-2 ml-5">Home</div>
+      <ul class="nav navbar-nav">
+          <li class="nav-item active">
+          </li>
 
-          
-        </ul>
+          <li class="nav-item">
+              <a class="nav-link myNavlink" data-toggle="modal" data-target="#modelId2">Fund Wallet</a>
+          </li>
 
+        
+      </ul>
+
+      @endauth
 
 
         <div class="ml-auto">
 
 
 
-            <a href="{{ route('logout') }} " class="mr-5 text-dark"> Logout</a>
+           @auth
+           <a href="{{ route('logout') }} " class="mr-5 text-dark"> Logout</a>
+           @endauth
         </div>
     </nav>
 
