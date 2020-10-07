@@ -28,22 +28,23 @@
         </div>
         <div class="d-flex justify-content-center navbar-brand pl-2">SMART WALLET</div>
 
-     @auth
+    
      <div class="col-sm-12">
         <div class="sidelistwrp">
             <ul>
                 <li class="pl-2 noLgScr">Dashboard</li>
-                <li class="pl-2" data-toggle="modal" data-target="#modelId">My Wallet Balance</li>
+                @auth <li class="pl-2" data-toggle="modal" data-target="#modelId">My Wallet Balance</li>
                 <a href="tel://08121225275">
                     <li class="pl-2">Live Call</li>
                 </a>
                 <a href="{{ route('logout') }}">
                     <li class="pl-2">Logout</li>
-                </a>
+                </a>    @endauth
             </ul>
         </div>
     </div>
-     @endauth
+ 
+
     </div>
 
 
