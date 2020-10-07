@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mb-5">
         <div class="col-sm-12 col-md-3">
             <div class="card myCardStyle shadow-sm card-body">
                 <div class="d-flex justify-content-center">
