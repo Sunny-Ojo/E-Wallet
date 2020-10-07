@@ -32,7 +32,7 @@
      <div class="col-sm-12">
         <div class="sidelistwrp">
             <ul>
-                <li class="pl-2 noLgScr">Dashboard</li>
+              <a href="{{ route('home') }}" >  <li class="pl-2 noLgScr">Dashboard</li></a>
                 @auth <li class="pl-2" data-toggle="modal" data-target="#modelId">My Wallet Balance</li>
                 <a href="tel://08121225275">
                     <li class="pl-2">Live Call</li>
