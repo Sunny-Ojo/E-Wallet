@@ -54,7 +54,7 @@
             <i class="text-dark myFontBars fa fa-bars menu-icon fa-2x" aria-hidden="true"></i>
         </button>
         @guest
-        <div class="navbar-brand pl-2 ml-5">Register On Smart Wallet</div>
+        <div class="navbar-brand pl-2 ml-5 text-warning">Register On Smart Wallet</div>
 
         @endguest
       @auth
