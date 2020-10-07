@@ -58,13 +58,13 @@
 
         @endguest
       @auth
-      <div class="navbar-brand pl-2 ml-5">Home</div>
+      <div class="navbar-brand pl-2 ml-5"><a href="/home" class=" text-warning ">Home</a></div>
       <ul class="nav navbar-nav">
           <li class="nav-item active">
           </li>
 
           <li class="nav-item">
-              <a class="nav-link myNavlink" data-toggle="modal" data-target="#modelId2">Fund Wallet</a>
+              <a class="nav-link d-none d-lg-block text-warning" data-toggle="modal" data-target="#modelId2">Fund Wallet</a>
           </li>
 
         
@@ -78,7 +78,7 @@
 
 
            @auth
-           <a href="{{ route('logout') }} " class="mr-5 text-dark"> Logout</a>
+           <a href="{{ route('logout') }} " class="mr-5 text-warning"> Logout</a>
            @endauth
         </div>
     </nav>

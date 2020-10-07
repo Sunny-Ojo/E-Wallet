@@ -44,7 +44,7 @@
                 @endguest
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link btn btn-success " href="{{ route('home') }}">Dashboard</a>
+                        <a class="nav-link btn btn-success text-white " href="{{ route('home') }}">Dashboard</a>
                     </li>
 
                 @endauth
