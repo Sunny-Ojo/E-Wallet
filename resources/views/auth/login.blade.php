@@ -57,7 +57,7 @@
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                                 <p class="text-center pt-0 mt-0 ">OR</p>
-                                <a href="{{ route('login') }}" class="btn btn-warning btn-block">Login</a>
+                                <a href="{{ route('register') }}" class="btn btn-warning btn-block">Register</a>
                             @endif
                             <div class="clearfix"></div>
                             <hr class="pt-0 mt-0">
