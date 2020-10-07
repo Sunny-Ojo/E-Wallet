@@ -106,7 +106,7 @@ class PaymentController extends Controller
             Transaction::create([
                 'amount' => $tranx['data']['metadata']['amount'],
                 'user_id' => Auth::id(),
-                'description' => $tranx['data']['metadata']['description']
+                'description' => $tranx['data']['metadata']['remarks']
             ]);
             $user = User::findOrFail(Auth::id());
             $user->amount += $tranx['data']['metadata']['amount'];
