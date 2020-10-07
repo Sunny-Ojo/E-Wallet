@@ -13,7 +13,7 @@
                         {{ Auth::user()->name }}
                     </div>
                     <div class="text-center font-weight-bold userID p-0 mt-4">
-                        {{ Auth::user()->wallet_id }}
+                        Wallet ID: {{ Auth::user()->wallet_id }}
                     </div>
                     <div class="text-center font-weight-bold userID p-0 mt-4">
                         <h1>
