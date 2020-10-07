@@ -106,7 +106,9 @@
                         </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                    <p><b> Dear {{ Auth::user()->name,  }},</b> Your Smart E-Wallet balance is &#8358;{{ number_format(Auth::user()->amount) }}</p>
+                    <p><b> Dear {{ Auth::user()->name,  }},</b> Your Smart E-Wallet balance is &#x20A6;
+                        {{ number_format(Auth::user()->amount) }}</p>
+                    
                     </div>
                 </div>
                 <div class="modal-footer">

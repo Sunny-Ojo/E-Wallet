@@ -10,13 +10,14 @@
                 </div>
                 <div class="mypadding-bottom">
                     <div class="text-center card-title myCardTitle font-weight-bold">
-                        {{ Auth::user()->firstName . ' ' . Auth::user()->lastName }}
+                        {{ Auth::user()->name }}
                     </div>
                     <div class="text-center font-weight-bold userID p-0 mt-4">
                         {{ Auth::user()->wallet_id }}
                     </div>
                     <div class="text-center font-weight-bold userID p-0 mt-4">
-                        <h1> &#8358;{{ number_format(Auth::user()->amount) }}</h1>
+                        <h1> &#x20A6;
+                            {{ number_format(Auth::user()->amount) }}</h1>
                     </div>
                     <div class="   mt-4">
                         <a class="text-dark text-decoration-none" href="{{ route('sendMoney') }}">Transfer Funds</a>
@@ -43,7 +44,8 @@
                 <div class="card-body">
                     @foreach ($transactions as $item)
                         <div class="border m-2">
-                            <li class="list-group-item">Amount: {{ number_format($item->amount) }}</li>
+                            <li class="list-group-item">Amount: &#x20A6;
+                                {{ number_format($item->amount) }}</li>
                             <li class="list-group-item">Description: {{ $item->description }}</li>
                             <li class="list-group-item">Date: {{ $item->created_at->diffForHumans() }}</li>
 
