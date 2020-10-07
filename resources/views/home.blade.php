@@ -16,7 +16,7 @@
                         {{ Auth::user()->wallet_id }}
                     </div>
                     <div class="text-center font-weight-bold userID p-0 mt-4">
-                        <h1> Naira
+                        <h1>
                             {{ number_format(Auth::user()->amount) }}</h1>
                     </div>
                     <div class="   mt-4">
@@ -46,7 +46,7 @@
                         @foreach ($transactions as $item)
                             <div class="border m-2">
                                 <li class="list-group-item">Amount:
-                                    Naira {{ number_format($item->amount) }}</li>
+                                    {{ number_format($item->amount) }}</li>
                                 <li class="list-group-item">Description: {{ $item->description }}</li>
                                 <li class="list-group-item">Date: {{ $item->created_at->diffForHumans() }}</li>
 
